@@ -57,7 +57,7 @@ jobs:
 
       - name: Clone origin
         if: steps.run_type.outputs.run_type == 'new-repository'
-        run: git clone --depth 1 https://github.com/hacs/default /tmp/repositories/default
+        run: git clone --depth 1 https://github.com/${{ github.repository }} /tmp/repositories/default
 
       - name: Set repository
         id: repository
